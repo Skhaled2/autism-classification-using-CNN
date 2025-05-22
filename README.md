@@ -1,7 +1,7 @@
 # autism-classification-using-CNN
 This project aims to detect autism in children using Convolutional Neural Networks (CNNs) based on image data. The dataset consists of images categorized into autistic and non-autistic children.
 
-#Table of Contents
+# Table of Contents
 Installation
 Dataset Preparation
 Model Architecture
@@ -9,12 +9,12 @@ Training the Model
 Evaluating the Model
 Results
 
-#Installation
+# Installation
 -To run this project, you need to install the following libraries:
 pip install tensorflow
 pip install matplotlib
 
-#Dataset Preparation
+# Dataset Preparation
 -Dataset Structure:
   The dataset should be organized into the following structure:
 autism/
@@ -80,7 +80,7 @@ test_generator = test_datagen.flow_from_directory(
     class_mode='binary'
 )
 
-#Model Architecture
+# Model Architecture
 -The model is built using the VGG16 architecture with additional layers for binary classification:
 
 from tensorflow.keras.applications import VGG16
@@ -120,16 +120,16 @@ history = model.fit(
     callbacks=[early_stopping]
 )
 
-#Evaluating the Model
+# Evaluating the Model
 -The model is evaluated on the test set:
 
 test_loss, test_accuracy = model.evaluate(test_generator)
 print("Test Accuracy:", test_accuracy)
 
-#Results
+# Results
 the final accuracy is 81% and the curves is provided
 
-#References
+# References
 VGG16 Paper: Very Deep Convolutional Networks for Large-Scale Image Recognition (https://arxiv.org/abs/1409.1556)
 TensorFlow Documentation: https://www.tensorflow.org/api_docs
 
